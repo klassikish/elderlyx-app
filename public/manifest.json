@@ -1,0 +1,59 @@
+{
+  "name": "Elderlyx — Premium Senior Care",
+  "short_name": "Elderlyx",
+  "description": "Book trusted, background-checked caregivers for companionship and transportation.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0f1e3d",
+  "theme_color": "#0f1e3d",
+  "lang": "en",
+  "categories": ["health", "lifestyle", "medical"],
+  "icons": [
+    {
+      "src": "https://media.base44.com/images/public/69bb761fbc552006545f08f5/dab7c7a2b_generated_image.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://media.base44.com/images/public/69bb761fbc552006545f08f5/8841264af_generated_image.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://media.base44.com/images/public/69bb761fbc552006545f08f5/2326c25f3_generated_image.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-home.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Home Dashboard"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Book Care",
+      "short_name": "Book",
+      "description": "Book a caregiver now",
+      "url": "/Book",
+      "icons": [{ "src": "https://media.base44.com/images/public/69bb761fbc552006545f08f5/dab7c7a2b_generated_image.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "My Bookings",
+      "short_name": "Bookings",
+      "description": "View your upcoming care visits",
+      "url": "/MyBookings",
+      "icons": [{ "src": "https://media.base44.com/images/public/69bb761fbc552006545f08f5/dab7c7a2b_generated_image.png", "sizes": "192x192" }]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

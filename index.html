@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+    <!-- PWA Core -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#0f1e3d" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Elderlyx" />
+
+    <!-- Apple PWA -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Elderlyx" />
+
+    <!-- Icons -->
+    <link rel="icon" type="image/png" href="https://media.base44.com/images/public/69bb761fbc552006545f08f5/dab7c7a2b_generated_image.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://media.base44.com/images/public/69bb761fbc552006545f08f5/8841264af_generated_image.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="https://media.base44.com/images/public/69bb761fbc552006545f08f5/8841264af_generated_image.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="https://media.base44.com/images/public/69bb761fbc552006545f08f5/dab7c7a2b_generated_image.png" />
+
+    <!-- SEO & Social -->
+    <title>Elderlyx — Premium Senior Care</title>
+    <meta name="description" content="Book trusted, background-checked caregivers for companionship and transportation. Premium senior care, always within reach." />
+    <meta name="keywords" content="senior care, caregiver, elderly care, companionship, transportation, home care" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Elderlyx — Premium Senior Care" />
+    <meta property="og:description" content="Book trusted caregivers for companionship and transportation. Premium senior care on demand." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/og-image.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Elderlyx" />
+    <meta name="twitter:description" content="Premium senior care, always within reach." />
+
+    <!-- Prevent zoom on input focus (iOS) -->
+    <style>
+      input, select, textarea { font-size: 16px !important; }
+      * { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+      body { overscroll-behavior: none; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch(() => {});
+        });
+      }
+    </script>
+  </body>
+</html>

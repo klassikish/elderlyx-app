@@ -1,0 +1,112 @@
+{
+  "name": "CarePack",
+  "type": "object",
+  "properties": {
+    "owner_email": {
+      "type": "string",
+      "description": "Email of the user who purchased"
+    },
+    "owner_id": {
+      "type": "string"
+    },
+    "owner_name": {
+      "type": "string"
+    },
+    "pack_type": {
+      "type": "string",
+      "enum": [
+        "standard",
+        "enhanced",
+        "pro"
+      ],
+      "description": "Which pack was purchased"
+    },
+    "total_visits": {
+      "type": "number",
+      "description": "Total visits purchased"
+    },
+    "used_visits": {
+      "type": "number",
+      "default": 0,
+      "description": "Visits already used"
+    },
+    "remaining_visits": {
+      "type": "number",
+      "description": "Visits remaining"
+    },
+    "amount_paid": {
+      "type": "number",
+      "description": "Total amount paid in USD"
+    },
+    "stripe_payment_intent_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "exhausted",
+        "refunded"
+      ],
+      "default": "active"
+    },
+    "purchased_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Optional expiry date"
+    }
+  },
+  "required": [
+    "owner_email",
+    "pack_type",
+    "total_visits",
+    "amount_paid"
+  ],
+  "rls": {
+    "create": {
+      "$or": [
+        {
+          "data.owner_email": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "read": {
+      "$or": [
+        {
+          "data.owner_email": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "update": {
+      "$or": [
+        {
+          "data.owner_email": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}
